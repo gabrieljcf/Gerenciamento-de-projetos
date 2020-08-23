@@ -14,7 +14,7 @@ class ProjectsController {
         try {
             const { data } = await api.get(`${name}/repos`);
             data.map(async repo => {
-                return await db('projects').insert({
+                await db('projects').insert({
                     id: repo.id,
                     name: repo.name
                 });

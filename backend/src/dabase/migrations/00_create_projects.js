@@ -1,10 +1,12 @@
-exports.up = async function (knex) {
+async function up(knex) {
     return knex.schema.createTable('projects', function (table) {
         table.string('id').primary();
         table.string('name').notNullable();
     })
 }
 
-exports.down = async function (knex) {
+async function down(knex) {
     return knex.schema.dropTable('projects');
 }
+
+module.exports = { up, down };
