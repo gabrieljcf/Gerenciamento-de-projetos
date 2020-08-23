@@ -49,10 +49,12 @@ class TasksController {
 
     async delete(request, response) {
         const { id } = request.params;
-
+        console.log(id);
         try {
 
-            const result = db('tasks').where('id', id).del();
+            const result = await db('tasks')
+                .where('id', id)
+                .del()
 
             if (!result) {
                 response.status(400).json({ error: 'Task not found' });
@@ -64,6 +66,23 @@ class TasksController {
             response.status(400).json({ error: 'Unexpected error while update a task' });
         }
 
+    }
+
+    async updateStatus(request, response) {
+        const { id } = request.params;
+
+        try {
+            const result = await db('tasks').where('id', '=', id).update({ status: 1 });
+
+            if (!result) {
+                response.status(400).json({ error: 'Task not found' });
+            }
+
+            return response.status(201).send();
+
+        } catch (error) {
+            response.status(400).json({ error: 'Unexpected error while update a task' });
+        }
     }
 }
 
