@@ -13,9 +13,9 @@ routes.post('/projects', projectsController.create);
 
 routes.get('/tasks/:id', tasksController.index);
 routes.post('/tasks/:id', tasksController.create);
-routes.put('/tasks/:id', tasksController.update);
-routes.delete('/tasks/:id', tasksController.delete);
-routes.delete('/tasks/:id', tasksController.delete);
-
+routes.put('/tasks/:projectId/:id', tasksController.update);
+routes.delete('/tasks/:projectId/:id', tasksController.delete);
+routes.delete('/tasks/:projectId/:id', tasksController.delete);
+routes.post('/tasks/:projectId/:id', tasksController.updateStatus);
 
 module.exports = routes;
