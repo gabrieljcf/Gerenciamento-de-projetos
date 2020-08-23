@@ -4,7 +4,9 @@ const { v4: uuid } = require('uuid');
 class TasksController {
     async index(request, response) {
         const { id: projectId } = request.params;
-        const tasks = await db('tasks').select('*').where('project_id', projectId);
+        const tasks = await db('tasks')
+            .select('*')
+            .where('project_id', projectId);
 
         return response.json(tasks);
     }
@@ -21,10 +23,47 @@ class TasksController {
 
         try {
             await db('tasks').insert(task);
-            response.status(201).send();
+            return response.status(201).send();
         } catch (error) {
-            response.status(400).json({ error: 'Unexpected error while creating new task' })
+            return response.status(400).json({ error: 'Unexpected error while creating new task' });
         }
+    }
+
+    async update(request, response) {
+        const { id } = request.params;
+        const { name } = request.body;
+
+        try {
+            const result = await db('tasks').where('id', '=', id).update({ name });
+
+            if (!result) {
+                response.status(400).json({ error: 'Task not found' });
+            }
+
+            return response.status(201).send();
+
+        } catch (error) {
+            response.status(400).json({ error: 'Unexpected error while update a task' });
+        }
+    }
+
+    async delete(request, response) {
+        const { id } = request.params;
+
+        try {
+
+            const result = db('tasks').where('id', id).del();
+
+            if (!result) {
+                response.status(400).json({ error: 'Task not found' });
+            }
+
+            return response.status(201).send();
+
+        } catch (error) {
+            response.status(400).json({ error: 'Unexpected error while update a task' });
+        }
+
     }
 }
 
