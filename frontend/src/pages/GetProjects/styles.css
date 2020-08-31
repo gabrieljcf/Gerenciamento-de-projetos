@@ -1,0 +1,48 @@
+body {
+    height: 100vh;
+    background-color: var(--bg-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.container img {
+    display: inline-block;
+    width: 600px;
+}
+
+.container .box-input-get-projects {
+    width: 600px;
+}
+
+.container .box-input-get-projects input {
+    border: none;
+    height: 3.2rem;
+    border-radius: 8px 0 0 8px;
+    width: 20rem;
+    padding: 0 10px;
+    outline: none;
+    font-size: 0.9rem;
+    color: #3b3b3b;
+}
+
+.container .box-input-get-projects button {
+    border: none;
+    background: #2D9965;
+    height: 3.2rem;
+    border-radius: 0 8px 8px 0;
+    width: 4rem;
+    color: #FFF;
+    outline: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0 10px;
+}
