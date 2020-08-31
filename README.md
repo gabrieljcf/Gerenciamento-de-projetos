@@ -31,6 +31,9 @@ A aplicação busca da api do github os repositórios, salva os mesmos no banco 
 
 Para clonar e executar a aplicação, você precisa ter [Git](https://git-scm.com), [NodeJs](https://nodejs.org/en/), [Yarn](https://yarnpkg.com) e o [MySql](https://www.mysql.com) instalado em seu computador
 
+## Atenção
+Será necessário criar um banco de dados com o nome manage_project e no arquivo knexfile colocar suas credenciais do mysql e também dentro do arquivo connection dentro da pasta database
+
 Em seu terminal:
 
 ```bash
@@ -48,8 +51,6 @@ $ yarn dev
 
 #Para rodar a aplicação frontEnd digite
 $ yarn start
-
-ATENÇÃO: será necessário criar um banco de dados com o nome manage_project e no arquivo knexfile colocar suas credenciais do mysql e também dentro do arquivo connection dentro da pasta database
 
 
 
