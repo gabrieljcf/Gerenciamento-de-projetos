@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   client: 'mysql',
   connection: {
@@ -6,6 +8,6 @@ module.exports = {
     password: 'root'
   },
   migrations: {
-    directory: './src/dabase/migrations'
+    directory: path.resolve(__dirname, 'src', 'database', 'migrations')
   }
 };
