@@ -1,4 +1,4 @@
-const db = require('../dabase/connection');
+const db = require('../database/connection');
 const api = require('../services/api');
 
 class ProjectsController {
