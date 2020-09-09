@@ -1,9 +1,9 @@
-body {
+#get-projects {
     height: 100vh;
     background-color: var(--bg-primary);
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;  
 }
 
 .container {
@@ -22,6 +22,13 @@ body {
     width: 600px;
 }
 
+.container .box-input-get-projects h1 {
+    color: #FFF;
+    margin-bottom: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.6rem;
+}
+
 .container .box-input-get-projects input {
     border: none;
     height: 3.2rem;
@@ -35,7 +42,7 @@ body {
 
 .container .box-input-get-projects button {
     border: none;
-    background: #2D9965;
+    background: var(--bg-button-primary);
     height: 3.2rem;
     border-radius: 0 8px 8px 0;
     width: 4rem;

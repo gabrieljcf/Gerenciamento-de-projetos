@@ -38,7 +38,7 @@ Em seu terminal:
 
 ```bash
 # clonando o repositório
-$ git clone https://github.com/gabrieljcf/getkcal.git
+$ git clonehttps://github.com/gabrieljcf/Gerenciamento-de-projetos.git
 
 #Entre na pasta backend e na pasta frontend e digite o seguinte comando para instalar as dependências 
 $ yarn

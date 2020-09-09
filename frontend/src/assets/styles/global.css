@@ -1,7 +1,10 @@
 :root {
   --bg-primary: #7DC497;
+  --bg-button-primary: #2D9965
 }
-
+body {
+  background: #ebebeb;
+}
 * {
   margin: 0;
   padding: 0;

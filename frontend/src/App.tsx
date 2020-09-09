@@ -1,10 +1,12 @@
 import React from 'react';
 
-import GetProjects from './pages/GetProjects';
+import Routes from './Routes';
+
+import './assets/styles/global.css';
 
 function App() {
   return (
-    <GetProjects />
+    <Routes />
   );
 }
 
