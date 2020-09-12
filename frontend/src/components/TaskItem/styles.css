@@ -1,0 +1,27 @@
+.container-item {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+.container-item .card {
+  width: 100%;
+  height: 4.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.1rem solid #dddddd;
+  border-radius: 8px;
+  position: relative;
+}
+
+.container-item .card .project-name {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #333333ce;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+}
+
