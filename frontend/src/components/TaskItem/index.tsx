@@ -3,6 +3,7 @@ import React from 'react';
 interface TaskProps {
   id: string;
   name: string;
+  status: number;
 }
 
 const TaskItem: React.FC<TaskProps> = ({ name, id }) => {

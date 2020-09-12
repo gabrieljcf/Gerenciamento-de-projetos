@@ -15,7 +15,6 @@ interface Task {
   id: string;
   name: string;
   status: number;
-  projectId: string;
 }
 
 function ListTasks(props: TaskProps) {
@@ -34,13 +33,14 @@ function ListTasks(props: TaskProps) {
     <div>
       <PageHeader />
       
-      {tasks.map((task: Task) => (
+      {tasks.map(({id, name, status}: Task) => (
         <TaskItem 
-          key={task.id} 
-          id={task.id} 
-          name={task.name} />)
+          key={id} 
+          id={id} 
+          name={name}
+          status={status} />)
       )}
-      
+
     </div>
   );
 }
