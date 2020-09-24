@@ -18,6 +18,7 @@ class TasksController {
         const task = {
             id: uuid(),
             name,
+            status:0,
             project_id: projectId,
         };
 
