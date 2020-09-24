@@ -23,7 +23,7 @@ class TasksController {
 
         try {
             await db('tasks').insert(task);
-            return response.status(201).send();
+            return response.status(201).json(task);
         } catch (error) {
             return response.status(400).json({ error: 'Unexpected error while creating new task' });
         }
